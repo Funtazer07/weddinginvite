@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+
+
 @font-face {
     font-family: 'LatoWeb';
     src: url('fonts/Lato-Regular.eot');
@@ -26,6 +28,11 @@
     src: url(fonts/YsabeauOffice.ttf);
 }
 
+@font-face {
+    font-family: Caveat;
+    src: url(fonts/caveat-regular.ttf);
+}
+
 body {
     margin: 0;
     background-color: #FFF7F6;
@@ -33,28 +40,36 @@ body {
 
 h2 {
     font-family: Ysabeau;
+    font-size: 2em;
     font-weight: 500;
     color: #BB616F;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 h3 {
-    font-family: LatoWeb;
+    font-weight: 100;
+    font-family: LatoItalic;
 }
 
 .hero {
+    background-image: url(media/hero-back.png);
+    background-size: cover;
     width: 100%;
-    height: 85vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
 }
 
 h1#names {
-    color: #BB616F;
-    width: 5em;
+    margin: auto;
+    text-align: center;
+    font-weight: 100;
+    font-family: Caveat;
+    color: #E3DDD8;
+    /* width: 5em; */
     font-size: 4em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     z-index: 1;
 }
 
@@ -69,23 +84,37 @@ h1#names {
     grid-area: text;
 }
 
+.greetings p, .wishes p {
+    color: #AC979A;
+}
+
 picture#intro-pic {
     grid-area: picture;
+    width: fit-content;
 }
 
 #date {
+    font-size: 2.5em;
+    font-family: LatoWeb;
+    font-weight: 100;
     grid-area: date;
+    color: #BB616F;
+    margin: auto;
+}
+
+#date li {
+    margin-left: 34%;
 }
 
 section.intro {
     width: 80%;
     margin: auto;
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
-      "text text"
-      "picture date";
+    grid-template-areas:
+        "text text"
+        "picture date";
 }
 
 section.schedule {
@@ -110,12 +139,11 @@ p {
 }
 
 .schedule h3 {
-    font-family: LatoItalic;
     color: #acacac;
 }
 
 .schedule>picture>img {
-    margin-top: 50%;
+    margin-top: 40%;
     width: 5em;
 }
 
@@ -194,17 +222,30 @@ p {
     grid-area: info5;
 }
 
+[data-reveal="left"]{
+    clip-path: inset(0 100% 0 0);
+  }
+  
+  [data-reveal="left"].revealed{
+    animation: reveal-left 1.2s cubic-bezier(0.17, 0.97, 0.38, 1) forwards 300ms;
+  }
+  
+  @keyframes reveal-left{
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
 section.location {
     display: flex;
     flex-direction: column;
     text-align: center;
     /* align-items: center; */
     justify-content: center;
-    background-color: beige;
-}
-
-.location h2, .location p {
-    text-align: left;
+    /* background-color: beige; */
 }
 
 section.wishes, section.survey, div.location-content {
@@ -215,8 +256,25 @@ section.wishes, section.survey, div.location-content {
     flex-direction: column;
 }
 
-.schedule h2, .wishes h2, .survey h2 {
+picture#location>img {
+    width: 100%;
+}
+
+.schedule h2, .wishes h2, .survey h2, .survey>p {
     text-align: center;
+}
+
+.location h3, .location p {
+    color: #998E90
+}
+
+.location h3 {
+    font-family: LatoWeb;
+    margin-bottom: 0;
+}
+
+.location p {
+    margin-top: 5px;
 }
 
 form {
@@ -244,8 +302,15 @@ form {
 
 .form-control input[type="text"] {
     padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.form-control input[type="text"]:focus {
+    border-bottom-color: #BB616F;
 }
 
 .radio-group .main-label,

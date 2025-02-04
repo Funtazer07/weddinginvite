@@ -9,10 +9,10 @@
 </head>
     <body>
         <section class="hero">
-            <h1 id="names">Edgar & Yana</h1>
-            <picture id="portrait">
+            <h1 id="names">Edgar <br> & <br> Yana</h1>
+            <!-- <picture id="portrait">
                 <img src="https://picsum.photos/325/500" alt="Portrait">
-            </picture>
+            </picture> -->
         </section>
         <section class="intro">
             <article class="greetings">
@@ -20,25 +20,16 @@
                 <p>Приглашаем Вас на торжество, посвященное нашему бракосочетанию. Разделите с нами радость начала новой страницы нашей жизни!</p>
             </article>
             <picture id="intro-pic">
-                <img src="https://picsum.photos/200/325" alt="Portrait">
+                <img src="https://picsum.photos/200/200" alt="Portrait">
             </picture>
-            <h1 id="date">15 . 05. 25</h1>
-        </section>
-        <section class="location">
-            <div class="location-content">
-                <h2>Локация</h2>
-                <p>Мы решили провести нашу свадьбу за городом, по адресу <i> Golfa iela 1, Piņķi - Jurmala Golf Club & Hotel</i></p>
-                <picture id="location">
-                    <img src="https://picsum.photos/200/200" alt="Portrait">
-                </picture>
-            </div>
+            <h1 id="date">15 <li></li>05<li></li> 25</h1>
         </section>
         <section class="schedule">
-            <h2>Тайминг дня</h2>
+            <h2>Программа дня</h2>
             <picture class="picture1">
                 <img src="media/location.svg" alt="schedule-1">
             </picture>
-            <div class="info1">
+            <div class="info1" data-reveal="left">
                 <h3>15:00 - 15:30 <br> СБОР ГОСТЕЙ</h3>
                 <p>Подарите нам свою улыбку и возьмите хорошее настроение.</p>
             </div>
@@ -46,7 +37,7 @@
             <picture class="picture2">
                 <img src="media/rings.svg" alt="schedule-3">
             </picture>
-            <div class="info2">
+            <div class="info2" data-reveal="left">
                 <h3>16:00 <br> ЦЕРЕМОНИЯ</h3>
                 <p>Может быть трогательно, разрешается всплакнуть.</p>
             </div>
@@ -54,7 +45,7 @@
             <picture class="picture3">
                 <img src="media/banquet.svg" alt="schedule-4">
             </picture>
-            <div class="info3">
+            <div class="info3" data-reveal="left">
                 <h3>18:00 <br> БАНКЕТ</h3>
                 <p>Самое время для вкусной еды, танцев и развлечений.</p>
             </div>
@@ -62,13 +53,23 @@
             <picture class="picture4">
                 <img src="media/fireworks.svg" alt="schedule-5">
             </picture>
-            <div class="info4">
+            <div class="info4" data-reveal="left">
                 <h3>02:00 <br> ЗАВЕРШЕНИЕ ПРАЗДНИКА</h3>
                 <p>Надеемся, этот вечер вам понравится.</p>
             </div>
         </section>
+        <section class="location">
+            <div class="location-content">
+                <h2>Локация</h2>
+                <picture id="location">
+                    <img src="media/banquet-photo.jpg" alt="Portrait">
+                </picture>
+                <h3>Jurmala Golf Club & Hotel</h3>
+                <p>Golfa iela 1, Piņķi</p>
+            </div>
+        </section>
         <section class="wishes">
-            <h2>ПОЖЕЛАНИЯ</h2>
+            <h2>Пожелания</h2>
             <h3>ПОДАРКИ</h3>
                 <p>Мы не будем оригинальными, но будем практичными. Лучший для нас подарок - инвестиция в нашу молодую семью.</p>
             <h3>ВЕЩИ</h3>
@@ -79,12 +80,12 @@
                 <p>Надеемся, что Вы сможете приехать без опозданий, это позволит нам провести больше времени с вами и не заставит пунктуальных гостей скучать.</p>
         </section>
         <section class="survey">
-            <h2>Анкета гостя</h2>
+            <h2>Ваше присутствие</h2>
             <p>Мы очень старались сделать праздник незабываемым, поэтому будем рады, если подтвердите свое присутствие и ответите на несколько вопросов в анкете ниже. Это поможет нам лучше подготовиться к нашей встрече. Будем ждать Ваш ответ до 28.02.2025</p>
             <form action="">
                 <div class="form-control">
                     <label>Ваши имя и фамилия</label>
-                    <input type="text" placeholder="Анна Иванова" />
+                    <input type="text" required placeholder="Анна Иванова" />
                 </div>
                 <div class="form-control">
                     <label>Если будете с парой/семьёй, укажите все имена</label>
@@ -96,7 +97,7 @@
                     </label>
                     <div class="radio-options">
                         <label>
-                            <input type="radio" name="attendance">Смогу/сможем присутствовать
+                            <input type="radio" name="attendance" required checked>Смогу/сможем присутствовать
                         </label>
                         <label>
                             <input type="radio" name="attendance">Затрудняюсь ответить, сообщу позже

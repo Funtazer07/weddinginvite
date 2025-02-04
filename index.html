@@ -7,29 +7,136 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body>
-    <section class="hero">
-        <h1 id="names">Edgar & Yana</h1>
-        <picture id="portrait">
-            <img src="https://picsum.photos/325/500" alt="Portrait">
-        </picture>
-    </section>
-    <section class="intro">
-        <article class="greetings">
-            <h2>Дорогие друзья!</h2>
-            <p>Приглашаем Вас на торжество, посвященное нашему бракосочетанию. Разделите с нами радость начала новой страницы нашей жизни!</p>
-        </article>
-        <picture id="intro-pic">
-            <img src="https://picsum.photos/200/325" alt="Portrait">
-        </picture>
-        <h1 id="date">15 . 05. 25</h1>
-    </section>
-    <section class="location">
-        <h2>Локация</h2>
-        <p>Мы решили провести нашу свадьбу за городом, по адресу <i> Golfa iela 1, Piņķi - Jurmala Golf Club & Hotel</i></p>
-        <picture id="location">
-            <img src="https://picsum.photos/200/200" alt="Portrait">
-        </picture>
-    </section>
-</body>
+    <body>
+        <section class="hero">
+            <h1 id="names">Edgar & Yana</h1>
+            <picture id="portrait">
+                <img src="https://picsum.photos/325/500" alt="Portrait">
+            </picture>
+        </section>
+        <section class="intro">
+            <article class="greetings">
+                <h2>Дорогие друзья!</h2>
+                <p>Приглашаем Вас на торжество, посвященное нашему бракосочетанию. Разделите с нами радость начала новой страницы нашей жизни!</p>
+            </article>
+            <picture id="intro-pic">
+                <img src="https://picsum.photos/200/325" alt="Portrait">
+            </picture>
+            <h1 id="date">15 . 05. 25</h1>
+        </section>
+        <section class="location">
+            <div class="location-content">
+                <h2>Локация</h2>
+                <p>Мы решили провести нашу свадьбу за городом, по адресу <i> Golfa iela 1, Piņķi - Jurmala Golf Club & Hotel</i></p>
+                <picture id="location">
+                    <img src="https://picsum.photos/200/200" alt="Portrait">
+                </picture>
+            </div>
+        </section>
+        <section class="schedule">
+            <h2>Тайминг дня</h2>
+            <h3>15: 00 - СБОР ГОСТЕЙ</h3>
+                <p>Подарите нам свою улыбку и возьмите хорошее настроение.</p>
+            <h3>15: 30 - ФУРШЕТ</h3>
+                <p>Вы сможете насладиться фуршетом, пообщаться с гостями и занять свои места.</p>
+            <h3>16: 00 - ЦЕРЕМОНИЯ</h3>
+                <p>Может быть трогательно, разрешается всплакнуть.</p>
+            <h3>18: 00 - БАНКЕТ</h3>
+                <p>Время вкусной еды, конкурсов, зажигательных танцев и поздравлений.</p>
+            <h3>02: 00 - ЗАВЕРШЕНИЕ ПРАЗДНИКА</h3>
+                <p>Надеемся, этот праздник принесе вам массу положительных эмоций и запомнится на долгое время.</p>
+        </section>
+        <section class="wishes">
+            <h2>ПОЖЕЛАНИИЯ</h2>
+            <h3>ПОДАРКИ</h3>
+                <p>Мы не будем оригинальными, но будем практичными. Лучший для нас подарок - инвестиция в нашу молодую семью.</p>
+            <h3>ВЕЩИ</h3>
+                <p>Захватите с собой удобную обувь для танцев. Дамы, просим заранее подумать об обуви — по гольф-полю на шпильках ходить нельзя.</p>
+            <h3>ЦВЕТЫ</h3>
+                <p>Будем рады, если вместо букетов вы подарите их стоимость — так мы сможем заказывать цветы и наслаждаться ими долгое время после свадьбы.</p>
+            <h3>ПУКТУАЛЬНОСТЬ</h3>
+                <p>Надеемся, что Вы сможете приехать без опозданий, это позволит нам провести больше времени с вами и не заставит пунктуальных гостей скучать.</p>
+        </section>
+        <section class="survey">
+            <h2>Анкета гостя</h2>
+            <p>Мы очень старались сделать праздник незабываемым, поэтому будем рады, если подтвердите свое присутствие и ответите на несколько вопросов в анкете ниже. Это поможет нам лучше подготовиться к нашей встрече. Будем ждать Ваш ответ до 23.02.2025</p>
+            <form action="">
+            <div class="form-control">
+                <label for="name" id="label-name">
+                    Ваши имя и фамилия
+                </label>
+                <input type="text" id="name" 
+                    placeholder="Анна Иванова" />
+            </div>
+            <div class="form-control">
+                <label for="name" id="label-name">
+                    Если будете с парой/семьёй, укажите все имена
+                </label>
+                <input type="text" id="name" 
+                    placeholder="Маша, Даша, Петя" />
+            </div>
+            <div class="form-control radio-group">
+                <label class="main-label">
+                    Сможете ли Вы присутствовать на свадьбе?
+                </label>
+                <div class="radio-options">
+                    <label for="recommed-1">
+                        <input type="radio" id="recommed-1" 
+                            name="recommed">Смогу/сможем присутствовать
+                    </label>
+                    <label for="recommed-2">
+                        <input type="radio" id="recommed-2" 
+                            name="recommed">Затрудняюсь ответить, сообщу позже
+                    </label>
+                    <label for="recommed-3">
+                        <input type="radio" id="recommed-3" 
+                            name="recommed">Не смогу прийти
+                    </label>
+                </div>
+            </div>
+            <div class="form-control">
+                <label>Предпочтения по напиткам
+                    <small>(можно выбрать несколько вариантов)</small>
+                </label>
+                <label for="inp-1">
+                    <input type="checkbox" name="inp">Шампанское
+                    </input>
+                </label>
+                <label for="inp-2">
+                    <input type="checkbox" name="inp">Белое сухое вино
+                    </input>
+                </label>
+                <label for="inp-3">
+                    <input type="checkbox" name="inp">Белое полусладкое вино
+                    </input>
+                </label>
+                <label for="inp-4">
+                    <input type="checkbox" name="inp">Красное сухое вино
+                    </input>
+                </label>
+                <label for="inp-5">
+                    <input type="checkbox" name="inp">Красное полусладкое вино
+                    </input>
+                </label>
+                <label for="inp-6">
+                    <input type="checkbox" name="inp">Водка
+                    </input>
+                </label>
+                <label for="inp-7">
+                    <input type="checkbox" name="inp">Коньяк
+                    </input>
+                </label>
+                <label for="inp-7">
+                    <input type="checkbox" name="inp">Виски
+                    </input>
+                </label>
+                <label for="inp-7">
+                    <input type="checkbox" name="inp">Безалкогольное
+                    </input>
+                </label>
+            </div>
+                <button type="submit" value="submit">ОТПРАВИТЬ</button>
+            </form>
+        </section>
+    </body>
 </html>

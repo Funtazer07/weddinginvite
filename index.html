@@ -16,7 +16,7 @@
         </section>
         <section class="intro">
             <article class="greetings">
-                <h2>Дорогие друзья!</h2>
+                <!-- <h2>Дорогие друзья!</h2> -->
                 <p>Приглашаем Вас на торжество, посвященное нашему бракосочетанию. Разделите с нами радость начала новой страницы нашей жизни!</p>
             </article>
             <picture id="intro-pic">
@@ -59,84 +59,69 @@
         </section>
         <section class="survey">
             <h2>Анкета гостя</h2>
-            <p>Мы очень старались сделать праздник незабываемым, поэтому будем рады, если подтвердите свое присутствие и ответите на несколько вопросов в анкете ниже. Это поможет нам лучше подготовиться к нашей встрече. Будем ждать Ваш ответ до 23.02.2025</p>
+            <p>Мы очень старались сделать праздник незабываемым, поэтому будем рады, если подтвердите свое присутствие и ответите на несколько вопросов в анкете ниже. Это поможет нам лучше подготовиться к нашей встрече. Будем ждать Ваш ответ до 28.02.2025</p>
             <form action="">
-            <div class="form-control">
-                <label for="name" id="label-name">
-                    Ваши имя и фамилия
-                </label>
-                <input type="text" id="name" 
-                    placeholder="Анна Иванова" />
-            </div>
-            <div class="form-control">
-                <label for="name" id="label-name">
-                    Если будете с парой/семьёй, укажите все имена
-                </label>
-                <input type="text" id="name" 
-                    placeholder="Маша, Даша, Петя" />
-            </div>
-            <div class="form-control radio-group">
-                <label class="main-label">
-                    Сможете ли Вы присутствовать на свадьбе?
-                </label>
-                <div class="radio-options">
-                    <label for="recommed-1">
-                        <input type="radio" id="recommed-1" 
-                            name="recommed">Смогу/сможем присутствовать
+                <div class="form-control">
+                    <label>Ваши имя и фамилия</label>
+                    <input type="text" placeholder="Анна Иванова" />
+                </div>
+                <div class="form-control">
+                    <label>Если будете с парой/семьёй, укажите все имена</label>
+                    <input type="text" placeholder="Маша, Даша, Петя" />
+                </div>
+                <div class="form-control radio-group">
+                    <label class="main-label">
+                        Сможете ли Вы присутствовать на свадьбе?
                     </label>
-                    <label for="recommed-2">
-                        <input type="radio" id="recommed-2" 
-                            name="recommed">Затрудняюсь ответить, сообщу позже
+                    <div class="radio-options">
+                        <label>
+                            <input type="radio" name="attendance">Смогу/сможем присутствовать
+                        </label>
+                        <label>
+                            <input type="radio" name="attendance">Затрудняюсь ответить, сообщу позже
+                        </label>
+                        <label>
+                            <input type="radio" name="attendance">Не смогу прийти
+                        </label>
+                    </div>
+                </div>
+                <div class="form-control checkbox-group">
+                    <label>Предпочтения по напиткам
+                        <small>(можно выбрать несколько вариантов)</small>
                     </label>
-                    <label for="recommed-3">
-                        <input type="radio" id="recommed-3" 
-                            name="recommed">Не смогу прийти
+                    <label>
+                        <input type="checkbox" name="drinks">Шампанское
+                    </label>
+                    <label>
+                        <input type="checkbox" name="drinks">Белое сухое вино
+                    </label>
+                    <label>
+                        <input type="checkbox" name="drinks">Белое полусладкое вино
+                    </label>
+                    <label>
+                        <input type="checkbox" name="drinks">Красное сухое вино
+                    </label>
+                    <label>
+                        <input type="checkbox" name="drinks">Красное полусладкое вино
+                    </label>
+                    <label>
+                        <input type="checkbox" name="drinks">Водка
+                    </label>
+                    <label>
+                        <input type="checkbox" name="drinks">Коньяк
+                    </label>
+                    <label>
+                        <input type="checkbox" name="drinks">Виски
+                    </label>
+                    <label>
+                        <input type="checkbox" name="drinks">Безалкогольное
                     </label>
                 </div>
-            </div>
-            <div class="form-control">
-                <label>Предпочтения по напиткам
-                    <small>(можно выбрать несколько вариантов)</small>
-                </label>
-                <label for="inp-1">
-                    <input type="checkbox" name="inp">Шампанское
-                    </input>
-                </label>
-                <label for="inp-2">
-                    <input type="checkbox" name="inp">Белое сухое вино
-                    </input>
-                </label>
-                <label for="inp-3">
-                    <input type="checkbox" name="inp">Белое полусладкое вино
-                    </input>
-                </label>
-                <label for="inp-4">
-                    <input type="checkbox" name="inp">Красное сухое вино
-                    </input>
-                </label>
-                <label for="inp-5">
-                    <input type="checkbox" name="inp">Красное полусладкое вино
-                    </input>
-                </label>
-                <label for="inp-6">
-                    <input type="checkbox" name="inp">Водка
-                    </input>
-                </label>
-                <label for="inp-7">
-                    <input type="checkbox" name="inp">Коньяк
-                    </input>
-                </label>
-                <label for="inp-7">
-                    <input type="checkbox" name="inp">Виски
-                    </input>
-                </label>
-                <label for="inp-7">
-                    <input type="checkbox" name="inp">Безалкогольное
-                    </input>
-                </label>
-            </div>
-                <button type="submit" value="submit">ОТПРАВИТЬ</button>
+                <button type="submit">ОТПРАВИТЬ</button>
             </form>
         </section>
+        <footer>
+            <p>Made by <a href="https://www.linkedin.com/in/andrejs-dvoskins-985b90312/" target="_blank">Andrejs Dvoskins</a></p>
+        </footer>
     </body>
 </html>

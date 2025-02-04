@@ -2,11 +2,36 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'LatoWeb';
+    src: url('fonts/Lato-Regular.eot');
+    src: url('fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Lato-Regular.woff2') format('woff2'),
+         url('fonts/Lato-Regular.woff') format('woff'),
+         url('fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LatoItalic';
+    src: url('fonts/Lato-Italic.eot');
+    src: url('fonts/Lato-Italic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Lato-Italic.woff2') format('woff2'),
+         url('fonts/Lato-Italic.woff') format('woff'),
+         url('fonts/Lato-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Ysabeau;
+    src: url(fonts/YsabeauOffice.ttf);
+}
+
 body {
     margin: 0;
     background-color: #FFF7F6;
 }
 h2, h3 {
+    font-family: LatoWeb;
     text-transform: uppercase;
 }
 
@@ -96,7 +121,8 @@ form {
     margin-bottom: 20px;
 }
 
-.radio-group .radio-options {
+.radio-group .radio-options,
+.checkbox-group {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -108,11 +134,28 @@ form {
     border: 1px solid #ccc;
 }
 
-.radio-group .main-label {
+.radio-group .main-label,
+.checkbox-group > label:first-child {
     margin-bottom: 10px;
 }
 
 form button {
+    border: none;
+    height: 3em;
+    border-radius: 1em;
+    margin: auto;
+    width: 10em;
     background-color: #BB616F;
     color: white;
+    font-family: LatoWeb;
+}
+
+footer {
+    display: flex;
+    height: 5em;
+}
+
+footer p {
+    font-family: 'LatoItalic';
+    margin: auto;
 }

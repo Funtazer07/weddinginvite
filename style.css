@@ -30,9 +30,16 @@ body {
     margin: 0;
     background-color: #FFF7F6;
 }
-h2, h3 {
-    font-family: LatoWeb;
+
+h2 {
+    font-family: Ysabeau;
+    font-weight: 500;
+    color: #BB616F;
     text-transform: uppercase;
+}
+
+h3 {
+    font-family: LatoWeb;
 }
 
 .hero {
@@ -74,11 +81,117 @@ section.intro {
     width: 80%;
     margin: auto;
     display: grid;
-    grid-template-columns: 50%;
+    grid-template-columns: 2fr 2fr;
     grid-template-rows: auto;
     grid-template-areas: 
       "text text"
       "picture date";
+}
+
+section.schedule {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "title title"
+      "picture1 info1"
+      "line1 ."
+      "picture2 info2"
+      "line2 ."
+      "picture3 info3"
+      "line3 ."
+      "picture4 info4";
+    gap: 20px;
+}
+
+p {
+    font-family: LatoWeb;
+}
+
+.schedule h3 {
+    font-family: LatoItalic;
+    color: #acacac;
+}
+
+.schedule>picture>img {
+    margin-top: 50%;
+    width: 5em;
+}
+
+.schedule h2 {
+    grid-area: title;
+    text-align: center;
+}
+
+.schedule .picture1 {
+    grid-area: picture1;
+}
+
+.schedule .picture2 {
+    grid-area: picture2;
+}
+
+.schedule .picture3 {
+    grid-area: picture3;
+}
+
+.schedule .picture4 {
+    grid-area: picture4;
+}
+
+.schedule .picture5 {
+    grid-area: picture5;
+}
+
+.schedule .line1,
+.schedule .line2,
+.schedule .line3,
+.schedule .line4 {
+    width: 2px;
+    height: 7em;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.schedule .line1 {
+    grid-area: line1;
+}
+
+.schedule .line2 {
+    grid-area: line2;
+}     
+
+.schedule .line3 {
+    grid-area: line3;
+}     
+
+.schedule .line4 {
+    grid-area: line4;
+}     
+
+.schedule .line5 {
+    grid-area: line5;
+}     
+
+.schedule .info1 {
+    grid-area: info1;
+}
+
+.schedule .info2 {
+    grid-area: info2;
+}
+
+.schedule .info3 {
+    grid-area: info3;
+}
+
+.schedule .info4 {
+    grid-area: info4;
+}
+
+.schedule .info5 {
+    grid-area: info5;
 }
 
 section.location {
@@ -94,7 +207,7 @@ section.location {
     text-align: left;
 }
 
-section.schedule, section.wishes, section.survey, div.location-content {
+section.wishes, section.survey, div.location-content {
     width: 80%;
     margin: auto;
     display: flex;
@@ -107,6 +220,7 @@ section.schedule, section.wishes, section.survey, div.location-content {
 }
 
 form {
+    font-family: LatoWeb;
     margin: auto;
     width: 80%;
     display: flex;

@@ -20,7 +20,6 @@
          url('fonts/Lato-Italic.woff2') format('woff2'),
          url('fonts/Lato-Italic.woff') format('woff'),
          url('fonts/Lato-Italic.ttf') format('truetype');
-    font-style: italic;
 }
 
 @font-face {
@@ -48,40 +47,55 @@ h2 {
 
 h3 {
     font-weight: 100;
-    font-family: LatoItalic;
+    font-family: 'LatoItalic';
 }
 
 .hero {
-    background-image: url(media/hero-back.png);
+    background-image: url(media/dreamy-bg1.png);
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50% 50%;
     width: 100%;
-    height: 95vh;
+    height: 82vh;
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
 }
 
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 h1#names {
-    margin: auto;
+    margin: 2em auto;
     text-align: center;
     font-weight: 100;
     font-family: Caveat;
-    color: #E3DDD8;
-    /* width: 5em; */
+    color: #BB616F;
     font-size: 4em;
-    /* text-transform: uppercase; */
     z-index: 1;
+    animation: slideDown 1.5s ease-out forwards;
 }
 
 #portrait {
     margin-left: 2em;
     margin-top: -6em;
-    /* position: absolute; */
     z-index: 0;
 }
 
 .greetings {
     grid-area: text;
+}
+
+.greetings p {
+    text-align: center;
 }
 
 .greetings p, .wishes p {
@@ -91,6 +105,10 @@ h1#names {
 picture#intro-pic {
     grid-area: picture;
     width: fit-content;
+}
+
+picture#intro-pic>img {
+    width: 100%;
 }
 
 #date {
@@ -139,7 +157,7 @@ p {
 }
 
 .schedule h3 {
-    color: #acacac;
+    color: #BB616F;
 }
 
 .schedule>picture>img {
@@ -256,8 +274,9 @@ section.wishes, section.survey, div.location-content {
     flex-direction: column;
 }
 
-picture#location>img {
+#location{
     width: 100%;
+    height: 25em;
 }
 
 .schedule h2, .wishes h2, .survey h2, .survey>p {
@@ -268,13 +287,30 @@ picture#location>img {
     color: #998E90
 }
 
-.location h3 {
+.location-content>h3 {
     font-family: LatoWeb;
     margin-bottom: 0;
 }
 
 .location p {
     margin-top: 5px;
+}
+
+.wishes h3 {
+    margin-bottom: 0;
+}
+
+.wishes p {
+    margin-top: 5px;
+}
+
+p#pls {
+    margin-bottom: 1px;
+}
+
+p#until {
+    margin-top: 0;
+    color: #BB616F;
 }
 
 form {
@@ -337,4 +373,31 @@ footer {
 footer p {
     font-family: 'LatoItalic';
     margin: auto;
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        max-width: 500px;
+        height: 94vh;
+    }
+
+    section.intro,
+    section.schedule,
+    section.wishes,
+    section.survey,
+    div.location-content {
+        max-width: 500px;
+        width: 90%;
+    }
+
+    form {
+        max-width: 500px;
+    }
 }

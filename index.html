@@ -10,17 +10,13 @@
     <body>
         <section class="hero">
             <h1 id="names">Edgar <br> & <br> Yana</h1>
-            <!-- <picture id="portrait">
-                <img src="https://picsum.photos/325/500" alt="Portrait">
-            </picture> -->
         </section>
         <section class="intro">
             <article class="greetings">
-                <!-- <h2>Дорогие друзья!</h2> -->
                 <p>Приглашаем Вас на торжество, посвященное нашему бракосочетанию. Разделите с нами радость начала новой страницы нашей жизни!</p>
             </article>
             <picture id="intro-pic">
-                <img src="https://picsum.photos/200/200" alt="Portrait">
+                <img src="media/yanaedgar.jpg" alt="Portrait">
             </picture>
             <h1 id="date">15 <li></li>05<li></li> 25</h1>
         </section>
@@ -61,9 +57,7 @@
         <section class="location">
             <div class="location-content">
                 <h2>Локация</h2>
-                <picture id="location">
-                    <img src="media/banquet-photo.jpg" alt="Portrait">
-                </picture>
+                <iframe id="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.609050937823!2d23.884868877161818!3d56.95549909872041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eedb63d54d0237%3A0x79c8e4ef3597abce!2sJurmala%20Golf%20Club%20%26%20Hotel!5e0!3m2!1sru!2snl!4v1738702852639!5m2!1sru!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <h3>Jurmala Golf Club & Hotel</h3>
                 <p>Golfa iela 1, Piņķi</p>
             </div>
@@ -75,21 +69,22 @@
             <h3>ВЕЩИ</h3>
                 <p>Захватите с собой удобную обувь для танцев. Дамы, просим заранее подумать об обуви — по гольф-полю на шпильках ходить нельзя.</p>
             <h3>ЦВЕТЫ</h3>
-                <p>Будем рады, если вместо букетов вы подарите их стоимость — так мы сможем заказывать цветы и наслаждаться ими долгое время после свадьбы.</p>
+                <p>Мы будем рады, если вместо букетов вы подарите сумму, эквивалентную их стоимости — это позволит нам заказывать цветы и наслаждаться ими ещё долгое время после свадьбы.</p>
             <h3>ПУКТУАЛЬНОСТЬ</h3>
                 <p>Надеемся, что Вы сможете приехать без опозданий, это позволит нам провести больше времени с вами и не заставит пунктуальных гостей скучать.</p>
         </section>
         <section class="survey">
             <h2>Ваше присутствие</h2>
-            <p>Мы очень старались сделать праздник незабываемым, поэтому будем рады, если подтвердите свое присутствие и ответите на несколько вопросов в анкете ниже. Это поможет нам лучше подготовиться к нашей встрече. Будем ждать Ваш ответ до 28.02.2025</p>
-            <form action="">
+            <p id="pls">Мы очень старались сделать праздник незабываемым, поэтому будем рады, если подтвердите свое присутствие и ответите на несколько вопросов в анкете ниже. Это поможет нам лучше подготовиться к нашей встрече. Будем ждать Ваш ответ до</p>
+            <p id="until">28.02.2025</p>
+            <form action="form.php" method="post">
                 <div class="form-control">
                     <label>Ваши имя и фамилия</label>
-                    <input type="text" required placeholder="Анна Иванова" />
+                    <input type="text" name="name" required placeholder="Анна Иванова" />
                 </div>
                 <div class="form-control">
                     <label>Если будете с парой/семьёй, укажите все имена</label>
-                    <input type="text" placeholder="Маша, Даша, Петя" />
+                    <input type="text" name="family" placeholder="Маша, Даша, Петя" />
                 </div>
                 <div class="form-control radio-group">
                     <label class="main-label">
@@ -97,13 +92,13 @@
                     </label>
                     <div class="radio-options">
                         <label>
-                            <input type="radio" name="attendance" required checked>Смогу/сможем присутствовать
+                            <input type="radio" name="attendance" value="Смогу присутствовать" required checked>Смогу/сможем присутствовать
                         </label>
                         <label>
-                            <input type="radio" name="attendance">Затрудняюсь ответить, сообщу позже
+                            <input type="radio" name="attendance" value="Сообщу позже">Затрудняюсь ответить, сообщу позже
                         </label>
                         <label>
-                            <input type="radio" name="attendance">Не смогу прийти
+                            <input type="radio" name="attendance" value="Не смогу прийти">Не смогу прийти
                         </label>
                     </div>
                 </div>
@@ -112,31 +107,31 @@
                         <small>(можно выбрать несколько вариантов)</small>
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Шампанское
+                        <input type="checkbox" name="drinks[]" value="Шампанское">Шампанское
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Белое сухое вино
+                        <input type="checkbox" name="drinks[]" value="Белое сухое вино">Белое сухое вино
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Белое полусладкое вино
+                        <input type="checkbox" name="drinks[]" value="Белое полусладкое вино">Белое полусладкое вино
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Красное сухое вино
+                        <input type="checkbox" name="drinks[]" value="Красное сухое вино">Красное сухое вино
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Красное полусладкое вино
+                        <input type="checkbox" name="drinks[]" value="Красное полусладкое вино">Красное полусладкое вино
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Водка
+                        <input type="checkbox" name="drinks[]" value="Водка">Водка
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Коньяк
+                        <input type="checkbox" name="drinks[]" value="Коньяк">Коньяк
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Виски
+                        <input type="checkbox" name="drinks[]" value="Виски">Виски
                     </label>
                     <label>
-                        <input type="checkbox" name="drinks">Безалкогольное
+                        <input type="checkbox" name="drinks[]" value="Безалкогольное">Безалкогольное
                     </label>
                 </div>
                 <button type="submit">ОТПРАВИТЬ</button>

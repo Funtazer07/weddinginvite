@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $toEmail = "andvoskin@gmail.com";  // Replace with your email address
     
     // Prepare email subject
-    $subject = "Wedding RSVP from " . $name;
+    $subject = "Wedding form from " . $name;
 
     // Prepare email body
     $mailBody = "Name: " . $name . "\r\n" .

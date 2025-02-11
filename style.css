@@ -32,6 +32,11 @@
     src: url(fonts/caveat-regular.ttf);
 }
 
+@font-face {
+    font-family: Playfair;
+    src: url(fonts/PlayfairDisplay-Regular.ttf);
+}
+
 body {
     margin: 0;
     background-color: #FFF7F6;
@@ -42,7 +47,6 @@ h2 {
     font-size: 2em;
     font-weight: 500;
     color: #BB616F;
-    /* text-transform: uppercase; */
 }
 
 h3 {
@@ -59,7 +63,6 @@ h3 {
     height: 82vh;
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
 }
 
 @keyframes slideDown {
@@ -82,6 +85,7 @@ h1#names {
     font-size: 4em;
     z-index: 1;
     animation: slideDown 1.5s ease-out forwards;
+    user-select: none;
 }
 
 #portrait {
@@ -112,17 +116,18 @@ picture#intro-pic>img {
 }
 
 #date {
-    font-size: 2.5em;
-    font-family: LatoWeb;
+    text-align: center;
+    font-size: 3em;
+    font-family: Playfair;
     font-weight: 100;
     grid-area: date;
     color: #BB616F;
     margin: auto;
+    line-height: 0.8;
+    padding: 0.5em 0;
+    user-select: none;
 }
 
-#date li {
-    margin-left: 34%;
-}
 
 section.intro {
     width: 80%;
@@ -359,10 +364,11 @@ form button {
     height: 3em;
     border-radius: 1em;
     margin: auto;
-    width: 10em;
+    width: 20em;
     background-color: #BB616F;
     color: white;
     font-family: LatoWeb;
+    cursor: pointer;
 }
 
 footer {

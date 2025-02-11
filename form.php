@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Convert drinks array to string if multiple options selected
     $drinksString = is_array($drinks) ? implode(", ", $drinks) : $drinks;
 
-    $toEmail = "andvoskin@gmail.com";  // Replace with your email address
+    $toEmail = "";  // Replace with your email address
     
     // Prepare email subject
     $subject = "Wedding form from " . $name;
